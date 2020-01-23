@@ -148,6 +148,11 @@ body{
 }
 
 .best-offers {
+  &__container {
+    @extend .container;
+    display: flex;
+    flex-direction: column;
+  }
   &__title{
     @extend .block-title;
     color: $black;
@@ -163,9 +168,18 @@ body{
     width: 33.333%;
     padding-right: 20px;
     box-sizing: border-box;
-    &:nth-child(4n) {
-      padding-right: 0;
-    }
+  }
+  &__see-all {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-family: $regular-font;
+    font-size: 14px;
+    width: 30%;
+    padding: 16px;
+    background-color: $blue;
+    box-sizing: border-box;
+    align-self: center;
   }
 }
 
@@ -192,6 +206,7 @@ body{
   }
   &:hover &__more-information {
     display: flex;
+    cursor: pointer;
   }
   &__information {
     display: flex;
@@ -219,6 +234,46 @@ body{
     padding: 16px;
     background-color: $blue;
     box-sizing: border-box;
+  }
+}
+
+.about {
+  background: url("../images/company_screen_image.png") no-repeat;
+  background-size: cover;
+  color: white;
+  &__container {
+    @extend .container;
+    display: flex;
+    flex-direction: column;
+    >p{
+      font-family: $regular-font;
+      font-size: 14px;
+    }
+  }
+  &__title {
+    color: white;
+  }
+  &__information {
+    display: flex;
+    flex-direction: row;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+  }
+  &__item-title {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    >span {
+      font-family: $accent-font;
+      font-size: 22px;
+    }
+    >number {
+      font-family: $regular-font;
+      font-size: 56px;
+    }
   }
 
 }

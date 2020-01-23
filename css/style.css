@@ -121,7 +121,7 @@ body {
   z-index: 1;
 }
 
-.container, .page-header__container, .main-screen__container {
+.container, .about__container, .best-offers__container, .page-header__container, .main-screen__container {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
@@ -135,6 +135,10 @@ body {
   line-height: 100%;
 }
 
+.best-offers__container {
+  display: flex;
+  flex-direction: column;
+}
 .best-offers__title {
   color: #525252;
 }
@@ -150,8 +154,17 @@ body {
   padding-right: 20px;
   box-sizing: border-box;
 }
-.best-offers__cardWrapper:nth-child(4n) {
-  padding-right: 0;
+.best-offers__see-all {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  width: 30%;
+  padding: 16px;
+  background-color: #425eab;
+  box-sizing: border-box;
+  align-self: center;
 }
 
 .offer-card {
@@ -175,6 +188,10 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+.offer-card:hover .offer-card__more-information {
+  display: flex;
+  cursor: pointer;
 }
 .offer-card__information {
   display: flex;
@@ -201,4 +218,39 @@ body {
   padding: 16px;
   background-color: #425eab;
   box-sizing: border-box;
+}
+
+.about {
+  background: url("../images/company_screen_image.png") no-repeat;
+  background-size: cover;
+  color: white;
+}
+.about__container {
+  display: flex;
+  flex-direction: column;
+}
+.about__container > p {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+}
+.about__title {
+  color: white;
+}
+.about__information {
+  display: flex;
+  flex-direction: row;
+}
+.about__item {
+  display: flex;
+  flex-direction: column;
+  margin-right: 40px;
+}
+.about__item-title {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.about__number {
+  font-family: "Lato", sans-serif;
+  font-size: 56px;
 }
