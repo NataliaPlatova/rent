@@ -1,6 +1,9 @@
 $blue: #425eab;
 $black: #525252;
 
+$accent-font: "Akrobat Black", sans-serif;
+$regular-font: "Lato", sans-serif;
+
 html {
   margin: 0;
   padding: 0;
@@ -11,6 +14,52 @@ body{
   padding: 0;
 }
 
+.page-header {
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+  &__container {
+    @extend .container;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  &__phone {
+    font-family: $regular-font;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+  }
+}
+
+.logo {
+  font-size: 22px;
+  font-family: $accent-font;
+  text-decoration: none;
+  color: white;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  &__item {
+    display: inline-block;
+    margin-right: 20px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    text-style: none;
+    font-size: 14px;
+    font-family: $regular-font;
+    color: white;
+  }
+}
+
 .main-screen {
   background: url("../images/main-screen-image.png") no-repeat;
   background-size: cover;
@@ -19,16 +68,26 @@ body{
   position: relative;
   color: white;
 
+  &__container {
+    @extend .container;
+    padding-top: 250px;
+    padding-bottom: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
   &__title {
-    font-family: "Akrobat Black", sans-serif;
     font-size: 48px;
     line-height: 56px;
     margin: 0;
     z-index: 3;
+    font-family: $accent-font;
   }
 
   &__subtitle {
-    font-family: "Lato";
+    font-family: $regular-font;
     font-size: 22px;
     line-height: 26px;
     max-width: 440px;
@@ -76,11 +135,90 @@ body{
 
 .container {
   max-width: 940px;
-  margin: 0 auto;
-  padding: 250px 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
+.block-title {
+  font-family: $accent-font;
+  font-size: 36px;
+  line-height: 100%;
+}
+
+.best-offers {
+  &__title{
+    @extend .block-title;
+    color: $black;
+  }
+  &__offers {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  &__cardWrapper {
+    width: 33.333%;
+    padding-right: 20px;
+    box-sizing: border-box;
+    &:nth-child(4n) {
+      padding-right: 0;
+    }
+  }
+}
+
+.offer-card {
+  width: 100%;
+  min-height: 226px;
+  position: relative;
+  &__photo {
+    width: 100%;
+    height: 100%;
+  }
+  &__more-information {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 16%;
+    box-sizing: border-box;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &:hover &__more-information {
+    display: flex;
+  }
+  &__information {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: white;
+    font-family: $regular-font;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  &__learn-more {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-family: $regular-font;
+    font-size: 14px;
+    width: 100%;
+    padding: 16px;
+    background-color: $blue;
+    box-sizing: border-box;
+  }
+
+}

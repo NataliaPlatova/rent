@@ -6,7 +6,20 @@
     <link href="css/style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-<header></header>
+<header class="page-header">
+    <div class="page-header__container">
+        <a href="#" class="logo">Бизнес-аренда</a>
+        <ul class="menu">
+            <li class="menu__item"><a class="menu__link">Подбор помещений</a></li>
+            <li class="menu__item"><a class="menu__link">О нас</a></li>
+            <li class="menu__item"><a class="menu__link">Наши партнеры</a></li>
+            <li class="menu__item"><a class="menu__link">Отзывы</a></li>
+            <li class="menu__item"><a class="menu__link">Вопрос-ответ</a></li>
+            <li class="menu__item"><a class="menu__link">Контакты</a></li>
+        </ul>
+        <span class="page-header__phone">8(383)20-20-201</span>
+    </div>
+</header>
 <main>
     <section class="main-screen">
         <div class="main-screen__decorations decorations">
@@ -15,12 +28,40 @@
                 <div class="decorations__square decorations__square_black"></div>
             </div>
         </div>
-        <div class="main-screen__container container">
+        <div class="main-screen__container">
             <h1 class="main-screen__title">Ищете офисное помещение <br>в Новосибирске?</h1>
             <span class="main-screen__subtitle">Аренда офисных, складских, производственных и торговых площадей от собственника</span>
         </div>
     </section>
-    <section class="office-search"></section>
+    <section class="best-offers">
+        <div class="container">
+            <h2 class="block-title best-offers__title">Лучшие предложения</h2>
+            <div class="best-offers__offers">
+                <div class="best-offers__cardWrapper">
+                    <div class="offer-card">
+                        <img class="offer-card__photo" src="images/office_images/card1.png" alt="office1" />
+                        <div class="offer-card__more-information">
+                            <div class="offer-card__information">
+                                <div class="offer-card__row">
+                                    <span>Цена</span>
+                                    <span>350 р/кв.м</span>
+                                </div>
+                                <div class="offer-card__row">
+                                    <span>Площадь</span>
+                                    <span>15 кв.м</span>
+                                </div>
+                                <div class="offer-card__row">
+                                    <span>Стоимость</span>
+                                    <span>5250 р</span>
+                                </div>
+                            </div>
+                            <a href="#" class="offer-card__learn-more">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="about"></section>
     <section class="benefits"></section>
     <section class="form"></section>
