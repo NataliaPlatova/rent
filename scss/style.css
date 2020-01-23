@@ -111,7 +111,9 @@ body {
 .block-title, .best-offers__title {
   font-family: "Akrobat Black", sans-serif;
   font-size: 36px;
-  line-height: 100%; }
+  line-height: 100%;
+  margin: 0;
+  padding: 0; }
 
 .best-offers__container {
   display: flex;
@@ -191,6 +193,8 @@ body {
   background-size: cover;
   color: white; }
   .about__container {
+    padding-top: 72px;
+    padding-bottom: 72px;
     display: flex;
     flex-direction: column; }
     .about__container > p {
@@ -204,16 +208,19 @@ body {
   .about__item {
     display: flex;
     flex-direction: column;
-    margin-right: 40px; }
+    margin-right: 40px;
+    font-family: "Lato", sans-serif;
+    font-size: 14px; }
   .about__item-title {
     display: flex;
     flex-direction: row;
-    align-items: flex-end; }
-    .about__item-title > span {
+    align-items: baseline; }
+    .about__item-title > .number {
+      font-size: 56px;
+      font-family: "Lato", sans-serif;
+      margin-right: 8px; }
+    .about__item-title > .measurement {
       font-family: "Akrobat Black", sans-serif;
       font-size: 22px; }
-    .about__item-title > number {
-      font-family: "Lato", sans-serif;
-      font-size: 56px; }
 
 /*# sourceMappingURL=style.css.map */

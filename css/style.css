@@ -133,6 +133,8 @@ body {
   font-family: "Akrobat Black", sans-serif;
   font-size: 36px;
   line-height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .best-offers__container {
@@ -226,6 +228,8 @@ body {
   color: white;
 }
 .about__container {
+  padding-top: 72px;
+  padding-bottom: 72px;
   display: flex;
   flex-direction: column;
 }
@@ -244,13 +248,20 @@ body {
   display: flex;
   flex-direction: column;
   margin-right: 40px;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
 }
 .about__item-title {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: baseline;
 }
-.about__number {
-  font-family: "Lato", sans-serif;
+.about__item-title > .number {
   font-size: 56px;
+  font-family: "Lato", sans-serif;
+  margin-right: 8px;
+}
+.about__item-title > .measurement {
+  font-family: "Akrobat Black", sans-serif;
+  font-size: 22px;
 }
