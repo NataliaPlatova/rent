@@ -14,6 +14,11 @@ body{
   padding: 0;
 }
 
+a:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -162,10 +167,13 @@ body{
     @extend .container;
     display: flex;
     flex-direction: column;
+    padding-top: 88px;
+    padding-bottom: 88px;
   }
   &__title{
     @extend .block-title;
     color: $black;
+    margin-bottom: 48px;
   }
   &__offers {
     display: flex;
@@ -177,6 +185,7 @@ body{
   &__cardWrapper {
     width: 33.333%;
     padding-right: 20px;
+    margin-bottom: 24px;
     box-sizing: border-box;
   }
   &__see-all {
@@ -378,13 +387,72 @@ body{
 .fields {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   >input {
     padding: 16px;
     min-width: 200px;
     border: none;
     margin-right: auto;
-    &:last-child {
-      margin-left: 0;
-    }
+  }
+}
+
+.contacts {
+  &__container {
+    @extend .container
+  }
+}
+
+.page-footer {
+  background-color: $blue;
+  &__container {
+    @extend .container;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+  }
+  &__nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: auto;
+  }
+  &__link {
+    text-decoration: none;
+    font-family: $regular-font;
+    font-size: 14px;
+    color: white;
+    margin-left: 24px;
+    margin-top: 4px;
+  }
+}
+.social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  &__link {
+    background-image: url("../images/social_sprite.png");
+    backgronud-repeat: no-repeat;
+    width: 39px;
+    height: 22px;
+  }
+  & .vk {
+    background-position: 0, 0;
+  }
+  & .gplus {
+    background-position: top 0 left -39px;
+  }
+  & .fb {
+    background-position: top 0 left -78px;
+  }
+  & .twitter {
+    background-position: top 0 left -117px;
+  }
+  & .odn {
+    background-position: top 0 left -156px;
+  }
+  & .youtube {
+    background-position: top 0 left -190px;
   }
 }

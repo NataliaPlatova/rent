@@ -8,6 +8,11 @@ body {
   padding: 0;
 }
 
+a:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -129,7 +134,7 @@ body {
   z-index: 1;
 }
 
-.container, .form__container, .benefits__container, .about__container, .best-offers__container, .page-header__container, .main-screen__container {
+.container, .page-footer__container, .contacts__container, .form__container, .benefits__container, .about__container, .best-offers__container, .page-header__container, .main-screen__container {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
@@ -148,9 +153,12 @@ body {
 .best-offers__container {
   display: flex;
   flex-direction: column;
+  padding-top: 88px;
+  padding-bottom: 88px;
 }
 .best-offers__title {
   color: #525252;
+  margin-bottom: 48px;
 }
 .best-offers__offers {
   display: flex;
@@ -162,6 +170,7 @@ body {
 .best-offers__cardWrapper {
   width: 33.333%;
   padding-right: 20px;
+  margin-bottom: 24px;
   box-sizing: border-box;
 }
 .best-offers__see-all {
@@ -356,6 +365,7 @@ body {
 .fields {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
 }
 .fields > input {
   padding: 16px;
@@ -363,6 +373,58 @@ body {
   border: none;
   margin-right: auto;
 }
-.fields > input:last-child {
-  margin-left: 0;
+
+.page-footer {
+  background-color: #425eab;
+}
+.page-footer__container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+}
+.page-footer__nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: auto;
+}
+.page-footer__link {
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  color: white;
+  margin-left: 24px;
+  margin-top: 4px;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.social__link {
+  background-image: url("../images/social_sprite.png");
+  backgronud-repeat: no-repeat;
+  width: 39px;
+  height: 22px;
+}
+.social .vk {
+  background-position: 0, 0;
+}
+.social .gplus {
+  background-position: top 0 left -39px;
+}
+.social .fb {
+  background-position: top 0 left -78px;
+}
+.social .twitter {
+  background-position: top 0 left -117px;
+}
+.social .odn {
+  background-position: top 0 left -156px;
+}
+.social .youtube {
+  background-position: top 0 left -190px;
 }
