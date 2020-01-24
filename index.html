@@ -282,7 +282,18 @@
         </div>
     </section>
     <section class="form">
-
+        <div class="form__container">
+            <h2 class="block-title form__title">Запишитесь на персональную экскурсию</h2>
+            <span>и выберитие подходящее помещение для вашего бизнеса</span>
+            <form autocomplete="off">
+                <section class="fields">
+                    <label for="name" class="visually-hidden">Имя</label><input type="text" placeholder="Ваше имя" name="name" id="name" required>
+                    <label for="phone" class="visually-hidden">Телефон</label><input type="tel" placeholder="Ваш телефон" name="phone" id="phone" required>
+                    <label for="email" class="visually-hidden">Телефон</label><input type="tel" placeholder="Ваш email" name="email" id="email" required>
+                    <button type="submit" class="form__submit-button">Записаться</button>
+                </section>
+            </form>
+        </div>
     </section>
     <section class="contacts"></section>
 </main>

@@ -8,6 +8,14 @@ body {
   padding: 0;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 .page-header {
   width: 100%;
   position: absolute;
@@ -121,7 +129,7 @@ body {
   z-index: 1;
 }
 
-.container, .benefits__container, .about__container, .best-offers__container, .page-header__container, .main-screen__container {
+.container, .form__container, .benefits__container, .about__container, .best-offers__container, .page-header__container, .main-screen__container {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
@@ -290,6 +298,7 @@ body {
   margin-right: 0;
 }
 .benefits__item {
+  width: 100%;
   margin-top: 32px;
   display: flex;
   flex-direction: column;
@@ -309,4 +318,51 @@ body {
   font-family: "Lato", sans-serif;
   font-size: 14px;
   color: #525252;
+}
+
+.form {
+  background: url("../images/form-bg-image.png") no-repeat;
+  background-size: cover;
+}
+.form__container {
+  padding-bottom: 112px;
+  padding-top: 112px;
+}
+.form__container > span {
+  font-family: "Lato", sans-serif;
+  color: white;
+  font-size: 22px;
+}
+.form__container > form {
+  margin-top: 42px;
+  display: flex;
+  width: 100%;
+}
+.form__title {
+  color: white;
+}
+.form__submit-button {
+  padding: 16px;
+  background-color: #425eab;
+  color: white;
+  text-align: center;
+  border: none;
+  min-width: 200px;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  margin-left: auto;
+}
+
+.fields {
+  width: 100%;
+  display: flex;
+}
+.fields > input {
+  padding: 16px;
+  min-width: 200px;
+  border: none;
+  margin-right: auto;
+}
+.fields > input:last-child {
+  margin-left: 0;
 }

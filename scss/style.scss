@@ -14,6 +14,14 @@ body{
   padding: 0;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 .page-header {
   width: 100%;
   position: absolute;
@@ -329,6 +337,54 @@ body{
       font-family: $regular-font;
       font-size: 14px;
       color: $black;
+    }
+  }
+}
+
+.form {
+  background: url("../images/form-bg-image.png") no-repeat;
+  background-size: cover;
+  &__container {
+    @extend .container;
+    padding-bottom: 112px;
+    padding-top: 112px;
+    >span {
+      font-family: $regular-font;
+      color: white;
+      font-size: 22px;
+    }
+    >form {
+      margin-top: 42px;
+      display: flex;
+      width: 100%;
+    }
+  }
+  &__title {
+    color: white;
+  }
+  &__submit-button {
+    padding: 16px;
+    background-color: $blue;
+    color: white;
+    text-align: center;
+    border: none;
+    min-width: 200px;
+    font-family: $regular-font;
+    font-size: 14px;
+    margin-left: auto;
+  }
+}
+
+.fields {
+  width: 100%;
+  display: flex;
+  >input {
+    padding: 16px;
+    min-width: 200px;
+    border: none;
+    margin-right: auto;
+    &:last-child {
+      margin-left: 0;
     }
   }
 }
