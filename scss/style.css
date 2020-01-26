@@ -20,7 +20,7 @@ a:hover {
 .page-header {
   width: 100%;
   position: absolute;
-  z-index: 3; }
+  z-index: 50; }
   .page-header__container {
     display: flex;
     flex-direction: row;
@@ -33,6 +33,8 @@ a:hover {
     font-size: 18px;
     font-weight: bold;
     color: white; }
+  .page-header__burger {
+    display: none; }
 
 .logo {
   font-size: 22px;
@@ -42,10 +44,12 @@ a:hover {
 
 .menu {
   list-style: none;
-  padding: 0; }
+  padding: 0;
+  display: block;
+  flex-shrink: 2; }
   .menu__item {
     display: inline-block;
-    margin-right: 20px; }
+    margin: 8px 20px 8px 0px; }
     .menu__item:last-child {
       margin-right: 0; }
   .menu__link {
@@ -54,6 +58,57 @@ a:hover {
     font-family: "Lato", sans-serif;
     color: white; }
 
+@media screen and (max-width: 768px) {
+  .page-header__burger {
+    display: block;
+    width: 30px;
+    height: 20px;
+    position: relative; }
+    .page-header__burger > span {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      top: 9px;
+      background-color: white;
+      transition: all 0.3s ease 0s; }
+    .page-header__burger:before, .page-header__burger:after {
+      content: "";
+      background-color: white;
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      left: 0;
+      transition: all 0.3s ease 0s; }
+    .page-header__burger:before {
+      top: 0; }
+    .page-header__burger:after {
+      bottom: 0; }
+    .page-header__burger.active:before {
+      transform: rotate(45deg);
+      top: 9px; }
+    .page-header__burger.active:after {
+      transform: rotate(-45deg);
+      bottom: 9px; }
+    .page-header__burger.active > span {
+      transform: scale(0); }
+
+  .menu {
+    position: absolute;
+    top: -360px;
+    background-color: #525252;
+    width: 100%;
+    box-sizing: border-box;
+    left: 0;
+    padding: 16px 32px;
+    transition: all 0.3s ease 0s; }
+    .menu__item {
+      display: block;
+      margin-bottom: 12px; }
+    .menu__link {
+      font-size: 20px; }
+    .menu.active {
+      top: 60px; } }
 .main-screen {
   background: url("../images/main-screen-image.png") no-repeat;
   background-size: cover;

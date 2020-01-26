@@ -30,7 +30,7 @@ a:hover {
 .page-header {
   width: 100%;
   position: absolute;
-  z-index: 3;
+  z-index: 50;
   &__container {
     @extend .container;
     display: flex;
@@ -46,6 +46,9 @@ a:hover {
     font-weight: bold;
     color: white;
   }
+  &__burger {
+    display: none;
+  }
 }
 
 .logo {
@@ -58,9 +61,11 @@ a:hover {
 .menu {
   list-style: none;
   padding: 0;
+  display: block;
+  flex-shrink: 2;
   &__item {
     display: inline-block;
-    margin-right: 20px;
+    margin: 8px 20px 8px 0px;
     &:last-child {
       margin-right: 0;
     }
@@ -70,6 +75,71 @@ a:hover {
     font-size: 14px;
     font-family: $regular-font;
     color: white;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .page-header__burger {
+    display: block;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    &>span {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      top: 9px;
+      background-color: white;
+      transition: all 0.3s ease 0s;
+    }
+    &:before,
+    &:after{
+      content: "";
+      background-color: white;
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      left: 0;
+      transition: all 0.3s ease 0s;
+    }
+    &:before {
+      top: 0;
+    }
+    &:after {
+      bottom: 0;
+    }
+    &.active:before{
+      transform: rotate(45deg);
+      top: 9px;
+    }
+    &.active:after{
+      transform: rotate(-45deg);
+      bottom: 9px;
+    }
+    &.active>span {
+      transform: scale(0);
+    }
+  }
+  .menu {
+    position: absolute;
+    top: -360px;
+    background-color: $black;
+    width: 100%;
+    box-sizing: border-box;
+    left: 0;
+    padding: 16px 32px;
+    transition: all 0.3s ease 0s;
+    &__item {
+      display: block;
+      margin-bottom: 12px;
+    }
+    &__link {
+      font-size: 20px;
+    }
+    &.active {
+      top: 60px
+    }
   }
 }
 
