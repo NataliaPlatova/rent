@@ -615,13 +615,14 @@ a:hover {
     align-items: center;
     margin-right: auto;
     flex-wrap: wrap;
+    margin-bottom: 12px;
   }
   &__link {
     text-decoration: none;
     font-family: $regular-font;
     font-size: 14px;
     color: white;
-    margin-left: 24px;
+    margin-right: 24px;
     margin-top: 4px;
   }
 }
@@ -629,6 +630,7 @@ a:hover {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-bottom: 12px;
   &__link {
     background-image: url("../images/social_sprite.png");
     backgronud-repeat: no-repeat;
@@ -655,16 +657,20 @@ a:hover {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .page-footer {
+    &__link {
+      font-size: 20px;
+    }
+  }
+}
+
 @media screen and (max-width: 360px) {
   .page-footer {
     &__container {
       flex-direction: column;
     }
     &__link {
-      text-decoration: none;
-      font-family: $regular-font;
-      font-size: 14px;
-      color: white;
       margin-left: 24px;
       margin: 16px 24px 16px 0;
     }
